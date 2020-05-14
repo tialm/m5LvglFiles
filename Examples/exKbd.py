@@ -59,6 +59,9 @@ tA = KeyButton(BUTTON_A_PIN, keyboard = kbd, key = lv.KEY.PREV, debug= True)
 tB = KeyButton(BUTTON_B_PIN, keyboard = kbd, key = lv.KEY.ENTER, debug= True)
 tC = KeyButton(BUTTON_C_PIN, keyboard = kbd, key = lv.KEY.NEXT, debug= True)
 
+# register the device driver:
+kbd.registerDriver()
+
 # Create a group
 group = lv.group_create()
 lv.group_add_obj(group, btn1)
@@ -66,8 +69,5 @@ lv.group_add_obj(group, btn2)
 lv.group_add_obj(group, btn3)
 lv.group_add_obj(group, btn4)
 kbd.group = group
-
-# register the device driver:
-kbd.registerDriver()
 
 print("Setup finished...")
