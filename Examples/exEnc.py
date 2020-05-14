@@ -57,7 +57,7 @@ lv.group_add_obj(group, btn1)
 lv.group_add_obj(group, btn2)
 lv.group_add_obj(group, btn3)
 lv.group_add_obj(group, btn4)
-kbd.group = group
+driv.group = group
 
 # register the device driver:
 enc.registerDriver()
